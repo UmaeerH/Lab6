@@ -41,13 +41,23 @@ class Node:
 
 #Testing
 def main():
-    leafNode1 = Node("leaf1")
-    leafNode2 = Node("leaf2")
-    leafNode3 = Node("leaf3")
-    childNode1 = Node("child1", [leafNode1, leafNode2])
-    childNode2 = Node("child2", [leafNode3])
-    rootNode = Node("root", [childNode1, childNode2])
-    print(leafNode2.subtreeSize())
+    rootTree = Node(1, [
+        Node(2, [
+            Node(3, [
+                Node(4)
+            ])
+        ]),
+        Node(5, [
+            Node(6, [
+                Node(7)
+            ]), 
+            Node(8)
+        ]),
+        Node(9, [
+            Node(10)
+        ])
+    ])
+    print(rootTree.subtreeSize())
 
 if __name__ == "__main__":
     main()
